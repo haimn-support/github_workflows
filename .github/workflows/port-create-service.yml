@@ -21,10 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ORG_NAME: haim9798
-      PORT_RUN_ID: ${{ fromJson(inputs.port_context).runId }}
+      ##PORT_RUN_ID: ${{ fromJson(inputs.port_context).runId }}
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Extract runId from port_context
+         run: |
+          echo "PORT_RUN_ID=$(echo '${{ inputs.port_context }}' | jq -r .runId)" >> $GITHUB_ENV
 
       - name: Create a log message
         uses: port-labs/port-github-action@v1
