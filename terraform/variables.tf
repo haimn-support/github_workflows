@@ -20,4 +20,9 @@ variable "port_run_id" {
   type        = string  
   description = "The runID of the action run that created the entity"  
   default     = ""  
-}  
+} 
+
+variable "service_tag" {  
+  description = "Service tag for the EKS cluster"  
+  type        = string  
+} 
