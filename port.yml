@@ -1,4 +1,4 @@
-- identifier: job-search-tracker-backend
+- identifier: job-search-tracker-frontend
   title:  "job search tracker app frontend"  
   blueprint: domain
   properties:
